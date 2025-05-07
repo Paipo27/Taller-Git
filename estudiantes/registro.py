@@ -28,3 +28,11 @@ def mostrar_estudiantes(estudiantes):
     for nombre, nota in estudiantes:
         print(f"{nombre:<15} {nota:>5.1f}")
 
+def calcular_promedio(estudiantes):
+    if not estudiantes:
+        return 0.0
+    total = sum(nota for _, nota in estudiantes)
+    promedio = total / len(estudiantes)
+    return promedio
+
+
