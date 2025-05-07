@@ -20,3 +20,11 @@ def cargar_estudiantes(ruta):
         print(f"Error al leer el archivo: {e}")
     return estudiantes
 
+# funcion para mostrar los estudiantes de forma ordenada alfabéticamente
+def mostrar_estudiantes(estudiantes):
+    # Ordenamos la lista de estudiantes por nombre
+    estudiantes.sort()
+    print(f"{'Nombre':<15} {'Nota':>5}")
+    for nombre, nota in estudiantes:
+        print(f"{nombre:<15} {nota:>5.1f}")
+
